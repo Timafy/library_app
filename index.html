@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Library </title>
+    <link rel="styleSheet" href="styles.css">
+    <script src="myscript.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">library.</h1>
+        <button id="logButton">Log In</button>
+    </div>       
+    <div class="main">
+        <div class="addBookContainer">
+            <button id="addBookButton">+ Add book</button>
+        </div>
+        <div id="bookContainer">
+        </div>
+        
+    </div>
+    <dialog>
+        <form action="/index.html" method="dialog">
+            <h3>Add your book here!</h3>
+            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="author" placeholder="Author">
+            <input type="text" id="pages" placeholder="Number of Pages">
+            <div id="checkbox_container">
+                <label for="read">Have you read this book?</label>
+                <input type="checkbox" id="read" value="read">
+            </div>
+            <button id = "submitButton" type="submit">Submit</button>
+        </form>
+    </dialog>
+</body>
+</html>

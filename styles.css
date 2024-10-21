@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "Roboto" ;
+    src: 
+        url("./Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    font-family: "Roboto"
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    border: solid 0.1px rgb(230, 230, 230);
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+.addBookContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+#bookContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax( 247px,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+#logButton {
+    appearance: none;
+    border: none;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+#logButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+#addBookButton {
+    margin-top: 30px;
+    font-size: 25px;
+    appearance: none;
+    border: none;
+    background-color: rgb(247, 247, 247);
+    border-radius: 15px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+
+}
+
+#addBookButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.main {
+    background-color: rgb(247, 247, 247);
+    height: 90vh;
+}
+
+.card {
+  background-color: white;
+  min-width: 220px;
+  min-height: 220px;
+  margin: 0px 15px;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+li {
+  list-style-type: none;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.read {
+  appearance: none;
+  border: none; 
+  background-color: rgb(171, 252, 139);
+  margin: 5px;
+  border-radius: 10px;
+}
+
+ul {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.6rem;
+  width: 280px;
+  height: 305px;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  margin-left: -140px;
+  margin-top: -205px;
+  background-color:white;
+  font-size: 17px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+form > * {
+  margin: 6px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+#submitButton {
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+  width: 185px;
+}
+
+#submitButton:hover {
+  background-color: rgb(220, 220, 220);
+}
