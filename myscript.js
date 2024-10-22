@@ -22,13 +22,20 @@ function Book(title, author, pages, read, index) {
     this.index = index;
 }
 
-function addBookToLibrary(book) {
-    myLibrary.push(book);
-}
+Book.prototype.addBookToLibrary = function() {
+    myLibrary.push(this);
+};
 
 function removeBook(index) {
     myLibrary.splice(index, 1);
+
 }
+
+function resetIndex() {
+    myLibrary.forEach(function(item, index) {
+        item.index = index;
+    });
+};
 
 bookContainer = document.getElementById("bookContainer");
 
@@ -41,7 +48,6 @@ function displayAllBook() {
     myLibrary.forEach((item)=>{
         let div = document.createElement("div");
         div.className = "card"; 
-        div.setAttribute("style", "margin: 20px;");
         let ul = document.createElement("ul");
         let title = document.createElement("li");
         title.textContent = `"${item.title}"`;
@@ -78,6 +84,7 @@ function displayAllBook() {
 
         remove.addEventListener("click", ()=>{
             removeBook(item.index);
+            resetIndex();
             displayAllBook();
         })
 
@@ -115,7 +122,7 @@ submitButton.addEventListener("click", (event)=>{
     else {
         newBook =  new Book(title.value, author.value, pages.value, false, myLibrary.length);
     };
-    addBookToLibrary(newBook);
+    newBook.addBookToLibrary();
     displayAllBook();
     form.reset();
     dialog.close();
