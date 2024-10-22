@@ -41,7 +41,7 @@
     align-items: center;
     height: 12vh;
     border: solid 0.1px rgb(230, 230, 230);
-    box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.75);
   }
 
   h1 {
@@ -115,9 +115,19 @@ li {
 .read {
   appearance: none;
   border: none; 
-  background-color: rgb(171, 252, 139);
+  background-color: rgb(211, 255, 161);
   margin: 5px;
   border-radius: 10px;
+  width: 130px;
+}
+
+.notRead {
+  appearance: none;
+  border: none; 
+  background-color: rgb(255, 128, 128);
+  margin: 5px;
+  border-radius: 10px;
+  width: 130px;
 }
 
 ul {
@@ -167,5 +177,25 @@ input {
 }
 
 #submitButton:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+::backdrop {
+  background-color: black;
+  opacity: 0.4;
+}
+
+#close:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.remove {
+  border: none;
+  border-radius: 5px;
+  width: 130px;
+  margin-top: 10px;
+}
+
+.remove:hover {
   background-color: rgb(220, 220, 220);
 }
